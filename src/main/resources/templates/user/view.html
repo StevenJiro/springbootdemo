@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+<h3 th:text="${title}"></h3>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th colspan="2">详细信息</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>编号：</td>
+        <td th:text="${user.id}"></td>
+    </tr>
+    <tr>
+        <td>用户名：</td>
+        <td th:text="${user.name}"></td>
+    </tr>
+    <tr>
+        <td>邮箱：</td>
+        <td th:text="${user.email}"></td>
+    </tr>
+    </tbody>
+</table>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
